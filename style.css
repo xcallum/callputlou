@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+*, *::after, *::before {
+	 border: 0;
+	 padding: 0;
+	 margin: 0;
+	 box-sizing: border-box;
+}
+
+/* Colors */
+ :root {
+	 --primary: #446df6;
+	 --success: #33ca7f;
+	 --danger: #e01541;
+	 --dark: #121614;
+	 --light: #a4b1aa;
+}
+
+ body {
+	 font-family: 'Poppins', sans-serif;
+	 display: grid;
+	 place-items: center;
+	 padding: 2rem;
+	 min-height: 100%;
+}
+
+ .container {
+	 max-width: 600px;
+}
+
+
+
+ .heading-container {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 margin: 1rem auto;
+	 background-color: rgba(164, 177, 170, 0.2);
+	 padding: 1rem;
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+ .heading-container h1 {
+	 color: black;
+	 margin-bottom: 0.5rem;
+}
+
+ .form-container {
+	 display: flex;
+	 justify-content: space-around;
+	 margin: 1rem auto;
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+ .form-container h1 {
+	 font-size: 3rem;
+	 text-align: center;
+}
+
+ .form-container h2 {
+	 color: black;
+}
+
+ form {
+	 display: grid;
+	 grid-gap: 1rem;
+	 margin: 1rem 0;
+	 width: 100%;
+}
+
+ form input, form textarea {
+	 font-family: inherit;
+	 font-size: inherit;
+	 height: 2rem;
+	 border: 1px solid #a4b1aa;
+	 border-radius: 2000px;
+}
+
+ .warrant-container {
+	 display: flex;
+	 align-items: center;
+	 flex-wrap: wrap;
+	 padding: 1rem;
+	 grid-gap: 1rem;
+	 background-color: rgba(164, 177, 170, 0.2);
+}
+
+ .warrant-container input, .warrant-container textarea {
+	 color: #121614;
+}
+
+ .warrant-container input:focus, .warrant-container textarea:focus {
+	 outline: 1px solid #121614;
+}
+
+ .button-container {
+	 display: flex;
+	 justify-content: center;
+}
+
+
+input[type="text"], input[type="number"] {
+    box-sizing: border-box;
+    padding-left: 1rem;;
+}
+
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+header p {
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 2rem;
+	font-weight: 700;
+}
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.2rem;
+	font-weight: 400;
+}
+nav ul li:hover, header p:hover {
+	cursor: pointer;
+}
+
+.result-container {
+	margin: 2rem auto 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 1.5rem;
+	
+}
+
+.result {
+	border: 0.5px solid rgba(19, 106, 138, 0.5); 
+	transition: all 250ms ease-in-out;
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+	margin: 1rem auto;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.result__heading {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+}
+
+.result__title {
+	font-weight: 550;
+	font-style: italic;
+	background-color: rgba(0, 0, 0, 0.05)
+}
+
+.result__btns  {
+	width: 100%;
+}
+
+.result__delete {
+	background-color: rgba(255, 255, 255);
+	padding: 0;
+	border-radius: 200px;
+	margin: 0.1rem auto;
+	cursor: pointer;
+}
+
+/* UI Decorations */
+
+.fancy-underline {
+	background-image: linear-gradient(120deg, #4CB8C4,#3CD3AD 100%);
+	background-repeat: no-repeat;
+	background-size: 100% 0.3em;
+	background-position: 0 80%;
+	transition: background-size 0.25s ease-in;
+  }
+
+.fancy-underline:hover {
+	background-size: 100% 88% !important;
+}
+         
+.btn-grad {
+	background-image: linear-gradient(to right, #136a8a 0%, #267871  51%, #136a8a  100%);
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;            
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 0.8rem;
+	width: 100%;
+  }
+
+.btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Responsive Design */
+
+@media (max-width: 40em) {
+	.container {
+		display: flex;
+		flex-direction: column;
+   }
+	h1 {
+		font-size: 2rem;
+   }
+	br {
+		content: " ";
+		display: none;
+   }
+	form {
+		margin: 0.5rem;
+		padding-bottom: 0.3rem;
+   }
+	input {
+		padding-left: 1rem;
+   }
+}
+
+

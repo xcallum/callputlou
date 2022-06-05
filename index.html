@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALLPUTLOU</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <header>
+        <div class="site-logo">
+            <p>CP佬</p>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    
+	<div class="calculator-container wrapper">	
+		<div class="heading-container container">
+			<h1 class="fancy-underline">
+				callput calculator
+			</h1>
+			<form>
+				<label for="underlying">underlying stock</label>
+				<input type="text" id="underlying" maxlength="10"/>
+
+                <label for="base-unit">base units</label>
+				<input type="number" id="base-units" value="100000"/>
+			</form>
+		</div>
+		
+		<div class="form-container container">
+				<div class="warrant-container">
+					<h2 class="leg-title">
+						📈 call leg
+					</h2>
+					<form>
+						<label for="call-code">warrant code</label>
+						<input type="number" id="call-code"/> <br>
+						<label for="call-delta">call delta</label>
+						<input type="number" id="call-delta"/>
+					</form>
+				</div>
+
+				<div class="warrant-container">
+					<h2 class="leg-title">
+						📉 put leg
+					</h2>
+					<form>
+						<label for="put-code">warrant code</label>
+						<input type="number" id="put-code"/> <br>
+						<label for="put-delta">put delta</label>
+						<input type="number" id="put-delta"/>
+					</form>
+				</div> 
+		</div>
+		
+
+	    <button type='submit' class="calculate-button btn-grad" id="calculate">
+			calculate
+		</button>
+
+		
+		<div class="result-container">	
+		</div>
+
+	</div>
+    <script src="script.js"></script>
+</body>
+</html>
